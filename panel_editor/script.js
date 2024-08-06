@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 	const url = new URL(window.location.href);
 	let id = url.searchParams.get('id');
 	let base64_data = url.searchParams.get('data');
-	if (!id) document.body.innerText = 'Invaild Id use (/panels_manager setup start) to get one';
+	// if (!id) document.body.innerText = 'Invaild Id use (/panels_manager setup start) to get one';
 
 	// let idData = await (
 	// 	await fetch('http://127.0.0.1:8080/api/panel-manager?id=' + id).catch((e) => console.error(e.message))
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	let guildData = {};
 
-	if (!idData) document.body.innerText = 'Invaild data use (/panels_manager setup start) to get one';
+	// if (!idData) document.body.innerText = 'Invaild data use (/panels_manager setup start) to get one';
 
 	const form = document.getElementById('panel-form');
 	const guildInput = document.getElementById('guild-data-input');

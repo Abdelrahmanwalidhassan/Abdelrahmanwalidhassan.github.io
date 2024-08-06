@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -9,12 +9,21 @@
 	</head>
 	<body>
 		<section class="container">
-			<header>Panel Form (66aa915bbd0fc420a84fd53c)</header>
+			<header>Panel Editor</header>
 			<form action="#" class="form" id="panel-form">
 				<div class="column">
+					<h3>
+						Get the guild data and panel data using the (/panels_manager)
+						command
+					</h3>
 					<div style="display: inline-block; margin-right: 20px">
 						<label for="">Upload Guild Data</label>
-						<input type="file" id="guild-data-input" accept=".txt,.json" style="margin-right: 20px" />
+						<input
+							type="file"
+							id="guild-data-input"
+							accept=".txt,.json"
+							style="margin-right: 20px"
+						/>
 					</div>
 
 					<div style="display: inline-block; margin-right: 20px">
@@ -26,18 +35,34 @@
 				<div id="con" style="display: none">
 					<div class="input-box">
 						<label>Panel Name</label>
-						<input id="name" type="text" placeholder="Enter Panel Name" required />
+						<input
+							id="name"
+							type="text"
+							placeholder="Enter Panel Name"
+							required
+						/>
 					</div>
 
 					<div class="input-box">
 						<label>Panel Description</label>
-						<input id="description" type="text" placeholder="Enter Panel Description" required />
+						<input
+							id="description"
+							type="text"
+							placeholder="Enter Panel Description"
+							required
+						/>
 					</div>
 
 					<div class="column">
 						<div class="input-box">
 							<label>Guild</label>
-							<input type="text" placeholder="Enter Guild" disabled required value="Guild (1259581463859429436)" />
+							<input
+								type="text"
+								placeholder="Enter Guild"
+								disabled
+								required
+								value="Guild (1259581463859429436)"
+							/>
 						</div>
 
 						<div class="input-box">
@@ -55,12 +80,24 @@
 					<div class="column">
 						<div class="input-box">
 							<label>Max tickets (Open)</label>
-							<input id="max-tickets" type="number" placeholder="Enter Number" required value="500" />
+							<input
+								id="max-tickets"
+								type="number"
+								placeholder="Enter Number"
+								required
+								value="500"
+							/>
 						</div>
 
 						<div class="input-box">
 							<label>Tickets Count</label>
-							<input id="tickets-count" type="number" placeholder="Enter Number" required value="0" />
+							<input
+								id="tickets-count"
+								type="number"
+								placeholder="Enter Number"
+								required
+								value="0"
+							/>
 						</div>
 					</div>
 
@@ -110,12 +147,22 @@
 
 						<div class="input-box">
 							<label>Schedule (Open)</label>
-							<input id="schedule-open" type="time" placeholder="Enter Schedule" value="00:00" />
+							<input
+								id="schedule-open"
+								type="time"
+								placeholder="Enter Schedule"
+								value="00:00"
+							/>
 						</div>
 
 						<div class="input-box">
 							<label>Schedule (Close)</label>
-							<input id="schedule-close" type="time" placeholder="Enter Schedule" value="00:00" />
+							<input
+								id="schedule-close"
+								type="time"
+								placeholder="Enter Schedule"
+								value="00:00"
+							/>
 						</div>
 					</div>
 
@@ -160,7 +207,16 @@
 					</div>
 
 					<div class="gender-box">
-						<h3 style="margin-top: 20px; margin-bottom: -10px; font-weight: 600; text-align: center">Role Select</h3>
+						<h3
+							style="
+								margin-top: 20px;
+								margin-bottom: -10px;
+								font-weight: 600;
+								text-align: center;
+							"
+						>
+							Role Select
+						</h3>
 						<div class="input-box">
 							<label for="role-select">Role Type: </label>
 							<select class="select-box" id="role-select">
@@ -182,7 +238,9 @@
 					<div class="column" id="parents2"></div>
 
 					<div>
-						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">Ticket Permissions</h3>
+						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">
+							Ticket Permissions
+						</h3>
 						<div class="column">
 							<div class="input-box">
 								<label for="state-select">State: </label>
@@ -207,11 +265,17 @@
 							</div>
 						</div>
 
-						<div class="gender-box" id="perm-con" style="text-align: center"></div>
+						<div
+							class="gender-box"
+							id="perm-con"
+							style="text-align: center"
+						></div>
 					</div>
 
 					<div class="con">
-						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">Creation Form</h3>
+						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">
+							Creation Form
+						</h3>
 						<div class="column">
 							<div class="input-box">
 								<label>Form Status</label>
@@ -225,11 +289,17 @@
 
 							<div class="input-box">
 								<label for="form-title">Form Title</label>
-								<input id="form-title" type="text" placeholder="Enter Form Title" />
+								<input
+									id="form-title"
+									type="text"
+									placeholder="Enter Form Title"
+								/>
 							</div>
 
 							<div class="input-box">
-								<button id="add-question-button" type="button">Add Question</button>
+								<button id="add-question-button" type="button">
+									Add Question
+								</button>
 							</div>
 						</div>
 						<div class="column" id="questions-container"></div>
