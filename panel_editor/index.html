@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Panels Manager</title>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="container">
+			<header>Panel Form (66aa915bbd0fc420a84fd53c)</header>
+			<form action="#" class="form" id="panel-form">
+				<div class="column">
+					<div style="display: inline-block; margin-right: 20px">
+						<label for="">Upload Guild Data</label>
+						<input type="file" id="guild-data-input" accept=".txt,.json" style="margin-right: 20px" />
+					</div>
+
+					<div style="display: inline-block; margin-right: 20px">
+						<label for="">Upload Panel Data</label>
+						<input type="file" id="panel-data-input" accept=".txt,.json" />
+					</div>
+				</div>
+
+				<div id="con" style="display: none">
+					<div class="input-box">
+						<label>Panel Name</label>
+						<input id="name" type="text" placeholder="Enter Panel Name" required />
+					</div>
+
+					<div class="input-box">
+						<label>Panel Description</label>
+						<input id="description" type="text" placeholder="Enter Panel Description" required />
+					</div>
+
+					<div class="column">
+						<div class="input-box">
+							<label>Guild</label>
+							<input type="text" placeholder="Enter Guild" disabled required value="Guild (1259581463859429436)" />
+						</div>
+
+						<div class="input-box">
+							<label>Status</label>
+							<div class="select-box">
+								<select id="status">
+									<option>Open</option>
+									<option>Closed</option>
+									<option>Vip</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="input-box">
+							<label>Max tickets (Open)</label>
+							<input id="max-tickets" type="number" placeholder="Enter Number" required value="500" />
+						</div>
+
+						<div class="input-box">
+							<label>Tickets Count</label>
+							<input id="tickets-count" type="number" placeholder="Enter Number" required value="0" />
+						</div>
+					</div>
+
+					<div class="column" id="schedule">
+						<div class="input-box">
+							<label>Schedule</label>
+							<div class="select-box">
+								<select id="schedule-status">
+									<option>Enabled</option>
+									<option selected>Disabled</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="input-box">
+							<label>UTC Offset</label>
+							<div class="select-box">
+								<select id="utc-offset">
+									<option>-1</option>
+									<option>-2</option>
+									<option>-3</option>
+									<option>-4</option>
+									<option>-5</option>
+									<option>-6</option>
+									<option>-7</option>
+									<option>-8</option>
+									<option>-9</option>
+									<option>-10</option>
+									<option>-11</option>
+									<option>-12</option>
+									<option>+0</option>
+									<option>+1</option>
+									<option>+2</option>
+									<option>+3</option>
+									<option>+4</option>
+									<option>+5</option>
+									<option>+6</option>
+									<option>+7</option>
+									<option>+8</option>
+									<option>+9</option>
+									<option>+10</option>
+									<option>+11</option>
+									<option>+12</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="input-box">
+							<label>Schedule (Open)</label>
+							<input id="schedule-open" type="time" placeholder="Enter Schedule" value="00:00" />
+						</div>
+
+						<div class="input-box">
+							<label>Schedule (Close)</label>
+							<input id="schedule-close" type="time" placeholder="Enter Schedule" value="00:00" />
+						</div>
+					</div>
+
+					<div class="gender-box" id="schedule-days">
+						<h3>Schedule Days</h3>
+						<div class="gender-option">
+							<div class="gender">
+								<input type="checkbox" name="days" id="Sunday" checked />
+								<label for="Sunday">Sunday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Monday" checked />
+								<label for="Monday">Monday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Tuesday" checked />
+								<label for="Tuesday">Tuesday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Wednesday" checked />
+								<label for="Wednesday">Wednesday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Thursday" checked />
+								<label for="Thursday">Thursday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Friday" checked />
+								<label for="Friday">Friday</label>
+							</div>
+
+							<div class="gender">
+								<input type="checkbox" name="days" id="Saturday" checked />
+								<label for="Saturday">Saturday</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="gender-box">
+						<h3 style="margin-top: 20px; margin-bottom: -10px; font-weight: 600; text-align: center">Role Select</h3>
+						<div class="input-box">
+							<label for="role-select">Role Type: </label>
+							<select class="select-box" id="role-select">
+								<option value="" disabled selected>Select Type</option>
+								<option value="support">Support Roles</option>
+								<option value="admins">Admin Roles</option>
+								<option value="vips">VIP Roles</option>
+								<option value="blacklist">Blacklist Roles</option>
+							</select>
+						</div>
+						<div class="gender-option" id="role-option"></div>
+					</div>
+
+					<div class="column" id="logs"></div>
+					<div class="column" id="logs2"></div>
+					<div class="column" id="logs3"></div>
+
+					<div class="column" id="parents"></div>
+					<div class="column" id="parents2"></div>
+
+					<div>
+						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">Ticket Permissions</h3>
+						<div class="column">
+							<div class="input-box">
+								<label for="state-select">State: </label>
+								<select class="select-box" id="state-select">
+									<option value="" disabled selected>Select State</option>
+									<option value="opened">Opened</option>
+									<option value="claimed">Claimed</option>
+									<option value="closed">Closed</option>
+								</select>
+							</div>
+
+							<div class="input-box">
+								<label for="state-role-select">Role: </label>
+								<select class="select-box" id="state-role-select">
+									<option value="" disabled selected>Select Role</option>
+									<option value="everyone">Everyone</option>
+									<option value="claimer">Claimer</option>
+									<option value="owner">Owner</option>
+									<option value="support">Support</option>
+									<option value="admins">Admins</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="gender-box" id="perm-con" style="text-align: center"></div>
+					</div>
+
+					<div class="con">
+						<h3 style="margin-top: 20px; font-weight: 600; text-align: center">Creation Form</h3>
+						<div class="column">
+							<div class="input-box">
+								<label>Form Status</label>
+								<div class="select-box">
+									<select id="form-status">
+										<option value="true">Enabled</option>
+										<option value="false" selected>Disabled</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="input-box">
+								<label for="form-title">Form Title</label>
+								<input id="form-title" type="text" placeholder="Enter Form Title" />
+							</div>
+
+							<div class="input-box">
+								<button id="add-question-button" type="button">Add Question</button>
+							</div>
+						</div>
+						<div class="column" id="questions-container"></div>
+					</div>
+
+					<button id="submit" type="submit">Submit</button>
+				</div>
+			</form>
+			<div id="bottom-right-element"></div>
+		</section>
+	</body>
+</html>
