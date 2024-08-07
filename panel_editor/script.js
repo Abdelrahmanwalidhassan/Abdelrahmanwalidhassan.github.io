@@ -169,6 +169,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 			);
 		});
 
+		console.log(idData.logChannelIds);
+
 		const ch_func = (e) =>
 			`<div class="input-box">` +
 			`<label>${e.charAt(0).toUpperCase() + e.slice(1)} logs</label>` +
