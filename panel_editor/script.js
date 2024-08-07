@@ -92,17 +92,17 @@ window.addEventListener("DOMContentLoaded", async () => {
 					} else if (event.target.id === "panel-data-input")
 						idData = JSON.parse(atob(base64String));
 
-					if (idData.guildId !== guildData.id) {
-						document.getElementById("con").style.display = "none";
-						return alert("Invalid data format");
-					} else {
-						update();
+					// if (idData.guildId !== guildData.id) {
+					// document.getElementById("con").style.display = "none";
+					// return alert("Invalid data format");
+					// } else {
+					update();
 
-						days.forEach((e) => {
-							if (idData.schedule?.days?.includes(e.id)) e.checked = true;
-							else e.checked = false;
-						});
-					}
+					days.forEach((e) => {
+						if (idData.schedule?.days?.includes(e.id)) e.checked = true;
+						else e.checked = false;
+					});
+					// }
 				} catch (error) {
 					console.error("Error parsing base64 string:", error);
 					alert("Invalid data format");
