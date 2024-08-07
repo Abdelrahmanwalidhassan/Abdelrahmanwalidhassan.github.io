@@ -169,8 +169,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 			);
 		});
 
-		console.log(idData.logChannelIds);
-
 		const ch_func = (e) =>
 			`<div class="input-box">` +
 			`<label>${e.charAt(0).toUpperCase() + e.slice(1)} logs</label>` +
@@ -213,7 +211,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 				?.filter((c) => c.type === 4)
 				.map(
 					(c) =>
-						`<option value="${c.id}">${c.name + " (" + c.id + ")"}</option>`,
+						`<option value="${c.id}" ${
+							c.id === idData.parentIds?.[e] ? "selected" : ""
+						}>${c.name + " (" + c.id + ")"}</option>`,
 				)
 				.join("") +
 			`</select>` +
@@ -431,6 +431,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 			logFormOptions();
 		}
 
+		questionsContainer.innerHTML = "";
 		questions.forEach((_, index) => createQuestionElement(index));
 
 		addQuestionButton.addEventListener("click", addQuestion);
